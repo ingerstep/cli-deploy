@@ -8,10 +8,10 @@ export const client = "pg";
 export const connection = {
   host: process.env.PGHOST,
   port: process.env.PGPORT,
-  database: process.env.PGUSER,
-  user: process.env.POSTGRES_USER,
+  database: process.env.PGDATABASE,
+  user: process.env.PGUSER,
   password: process.env.PGPASSWORD,
-};
+}
 export const migrations = {
   tableName: "knex_migrations",
 };
