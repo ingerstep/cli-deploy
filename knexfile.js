@@ -5,7 +5,13 @@ configDotenv();
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 export const client = "pg";
-export const connection = process.env.DATABASE_PUBLIC_URL;
+export const connection = {
+  host: process.env.PGHOST,
+  port: process.env.PGPORT,
+  database: process.env.PGUSER,
+  user: process.env.POSTGRES_USER,
+  password: process.env.PGPASSWORD,
+};
 export const migrations = {
   tableName: "knex_migrations",
 };
