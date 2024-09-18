@@ -7,7 +7,7 @@
   "keywords": [],
   "main": "index.js",
   "scripts": {
-    "start": "npm install && npm run db:migrate && node index.js",
+    "start": "npm install --force && npm run db:migrate && node index.js",
     "dev": "cross-env npm run db:migrate && nodemon index.js -e js,njk",
     "db:migrate": "knex migrate:latest",
     "test": "echo \"Tests passed\" && exit 0",
