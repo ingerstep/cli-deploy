@@ -13,13 +13,8 @@ const app = express();
 
 const db = knex({
   client: "pg",
-  connection: {
-    host: process.env.PGHOST,
-    port: process.env.PGPORT | 5432,
-    database: process.env.PGDATABASE,
-    user: process.env.PGUSER,
-    password: process.env.PGPASSWORD,
-  }
+  connection: process.env.DATABASE_PUBLIC_URL,
+  debug: true,
 });
 
 //DB actions
